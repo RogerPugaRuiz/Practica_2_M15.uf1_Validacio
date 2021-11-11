@@ -229,6 +229,7 @@ public class DNATools {
      * @return int[adnCount,noAdnCount]
      */
     public int[] adnLength(String str){
+        str = str.toUpperCase();
         int adnCount = 0;
         int noAdnCount = 0;
         int[] result = new int[2];

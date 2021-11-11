@@ -199,6 +199,38 @@ public class Practica2Test {
         assertEquals(expResult, result);
     }
     
+    
+    @Test
+    public void DnaCountTest(){
+        String dna = "AGCT";
+        int[] expected = {4,0};
+        DNATools tools = new DNATools();
+        int[] result = tools.adnLength(dna);
+        boolean condition = expected[0] == result[0] && expected[1] == result[1];
+        assertTrue(condition);
+    }
+    
+    // 
+    @Test
+    public void DnaCountNoMayusTest(){
+        String dna = "agct";
+        int[] expected = {4,0};
+        DNATools tools = new DNATools();
+        int[] result = tools.adnLength(dna);
+        boolean condition = expected[0] == result[0] && expected[1] == result[1];
+        assertTrue(condition);
+    }
+    
+    @Test
+    public void DnaCountNoDnaFormatTest(){
+        String dna = "lakdjfk";
+        int[] expected = {1,6};
+        DNATools tools = new DNATools();
+        int[] result = tools.adnLength(dna);
+        boolean condition = expected[0] == result[0] && expected[1] == result[1];
+        assertTrue(condition);
+    }
+    
 
 }
 
