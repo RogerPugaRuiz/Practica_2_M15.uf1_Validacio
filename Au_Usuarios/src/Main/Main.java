@@ -310,6 +310,10 @@ public class Main {
                 case 6:
                     rnaToDna();
                     break;
+                case 7:
+                    dnaCount();
+                    break;
+                
             }
         } while (option != 0);
     }
@@ -357,6 +361,17 @@ public class Main {
         DNATools toRNA = new DNATools();
         String cadena = toRNA.convert(ARN, 1);
         System.out.println("ARN to ADN: " + cadena);
+    }
+    
+    private static void dnaCount(){
+        System.out.println("Cadena ADN: " + ADN);
+        DNATools dnaTools = new DNATools();
+        int[] count = dnaTools.adnLength(ADN);
+        
+        System.out.println(
+                "DNA Count: " + count[0] + "\n" +
+                "No DNA Count: " + count[1] + "\n"
+        );
     }
 
     // ============================== ADMIN METHODS ====================================

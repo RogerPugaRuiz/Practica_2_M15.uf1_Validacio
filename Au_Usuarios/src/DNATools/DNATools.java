@@ -22,7 +22,7 @@ public class DNATools {
     private final int ADN_TO_ARN = 0;
     private final int ARN_TO_ADN = 1;
     /**
-     * Method to reversed the string adn
+     * Method to reversed the string adnCount
      *
      * @param adn
      * @return
@@ -221,5 +221,28 @@ public class DNATools {
                 return "ERROR la conversión no es valida";
         }
         return newString;
+    }
+    
+    /**
+     * Method to calculate the number of the correct char DNA
+     * @param str
+     * @return int[adnCount,noAdnCount]
+     */
+    public int[] adnLength(String str){
+        int adnCount = 0;
+        int noAdnCount = 0;
+        int[] result = new int[2];
+        
+        for (int i = 0; i < str.length(); i++){
+            if (isValidAdn(str.charAt(i))){
+                adnCount += 1;
+            }else{
+                noAdnCount += 1;
+            }
+        }
+        
+        result[0] = adnCount;
+        result[1] = noAdnCount;
+        return result;
     }
 }
