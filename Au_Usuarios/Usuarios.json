@@ -47,6 +47,13 @@
                         "email":"albert@gmail.com",
                         "password":"1234",
                         "rol":"user"
+                },
+                {
+                        "nombre":"Albert2",
+                        "apellidos": "Casany",
+                        "email":"albert2@gmail.com",
+                        "password":"1234",
+                        "rol":"user"
                 }
 	]
 }
